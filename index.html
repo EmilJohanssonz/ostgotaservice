@@ -8,17 +8,26 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Navigering -->
-  <nav class="navbar" aria-label="Huvudnavigation">
-    <a href="index.html">🏠 Hem</a>
-    <a href="textiltvatt.html">🛋️ Textiltvätt</a>
-    <a href="mattvatt.html">🧼 Mattvätt</a>
-    <a href="sangtvatt.html">🛏️ Sängtvätt</a>
-    <a href="utemobler-tvatt.html">🪑 Tvätt av utemöbler</a>
-    <a href="ugn-kamin-tvatt.html">♨️ Tvätt av ugn/kamin</a>
-    <a href="ogras.html">🌿 Ogräs</a>
-    <a href="snoskottning.html">❄️ Snöskottning</a>
+  <!-- Hamburger Menu Button -->
+  <button class="hamburger" id="hamburger">☰</button>
+
+  <!-- Sidebar navigation -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Hem</a></li>
+      <li><a href="textiltvatt.html">🛋️ Textiltvätt</a></li>
+      <li><a href="mattvatt.html">🧼 Mattvätt</a></li>
+      <li><a href="sangtvatt.html">🛏️ Sängtvätt</a></li>
+      <li><a href="utemobler-tvatt.html">🪑 Tvätt av utemöbler</a></li>
+      <li><a href="ugn-kamin-tvatt.html">♨️ Tvätt av ugn/kamin</a></li>
+      <li><a href="ogras.html">🌿 Ogräs</a></li>
+      <li><a href="snoskottning.html">❄️ Snöskottning</a></li>
+    </ul>
   </nav>
+
+  <!-- Optional overlay -->
+  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
   <!-- Header -->
   <header class="headerLogoAndLinks">
     <div class="kontakt">
@@ -30,6 +39,7 @@
     <h1>Östgöta Service UF</h1>
     <p>Vi tar hand om din vardag!</p>
   </header>
+
   <!-- Main -->
   <main class="mainsection">
     <figure class="städlogo">
@@ -39,8 +49,9 @@
           Vi anpassar alltid våra tjänster efter dina behov och de material vi arbetar med, för att leverera det bästa resultatet varje gång.</p>
       <img src="/img/Stadtjanster-i-Huskvarna-s-851x1024.jpg">
     </figure>
+
     <!-- Tjänster -->
-    <u1 class="service-list">
+    <ul class="service-list">
       <li>🛋️ Textiltvätt | Vi ger nytt liv åt dina soffor och textilier med skonsamma metoder som ångtvätt och kemtvätt.</li>
       <li>🧼 Mattvät | Vi tar hand om alla typer av mattor, från löpare till orientaliska mattor, och gör dem som nya igen.</li>
       <li>🛏️ Sängtvät | Vår sängtvätt håller dina madrasser rena och allergifria, Både enkel och dubbelsängar.</li>
@@ -48,8 +59,9 @@
       <li>♨️ Tvät av ugn/kamin | Vi tar hand om rengöringen av din ugn och kamin, så att de fungerar optimalt.</li>
       <li>🌿 Ogräsborttagning | Vi håller din trädgård fri från ogräs så att du kan njuta av din utomhusmiljö.</li>
       <li>❄️ Snöskottning | Vi ser till att dina gångar och vägar är snöfria och säkra under vintern.</li>
-    </u1>
+    </ul>
   </main>
+
   <!--Vilka är vi!-->
   <section class="omOss">
     <h5>Vilka är vi?</h5>
@@ -60,26 +72,32 @@
       Vårt mål är att underlätta din vardag genom att ta hand om de tuffa städuppgifterna så att du kan fokusera på det som verkligen betyder något för dig.<br><br> Vi brinner för att överträffa dina förväntningar och ge dig ett hem som känns fräscht och välkomnande.
       Låt oss hjälpa dig att skapa en ren och trivsam miljö – vi är här för att göra jobbet snabbt, grundligt och med ett leende.</p>
   </div>
+
   <div class="bilder">
-  <figure class="proffs">
-    <img src="/img/liam.png" alt="bild på liam">
-    <figcaption>Liam Filipsson | VD</figcaption>
-  </figure>
-  <figure class="proffs">
-    <img src="/img/vilgot.png" alt="bild på vilgot">
-    <figcaption>Vilgot Örberg | Ekonomi Manager</figcaption>
-  </figure>
-  <figure class="proffs">
-    <img src="/img/liam.png" alt="Brooke Henderson">
-    <figcaption>Eric Falkenberg | Marknad Manger</figcaption>
-  </figure>
-  <!--instagram-->
-</div>
-<footer>
-  <a href="https://www.instagram.com/ostgotaserviceuf/">
-    <button>Instragram</button></a>
-  <p>&copy; 2024 UF. All rights reserved.</p>
-</footer>
-  
+    <figure class="proffs">
+      <img src="/img/liam.png" alt="bild på liam">
+      <figcaption>Liam Filipsson | VD</figcaption>
+    </figure>
+    <figure class="proffs">
+      <img src="/img/vilgot.png" alt="bild på vilgot">
+      <figcaption>Vilgot Örberg | Ekonomi Manager</figcaption>
+    </figure>
+    <figure class="proffs">
+      <img src="/img/liam.png" alt="bild på eric">
+      <figcaption>Eric Falkenberg | Marknad Manger</figcaption>
+    </figure>
+  </div>
+
+  <footer>
+    <a href="https://www.instagram.com/ostgotaserviceuf/">
+      <button>Instragram</button></a>
+    <p>&copy; 2024 UF. All rights reserved.</p>
+    <p>Created and designed by Emil Johansson</p>
+    <p>https://github.com/EmilJohanssonz</p>
+  </footer>
+
+  <script src="index.js">
+  </script>
+
 </body>
 </html>

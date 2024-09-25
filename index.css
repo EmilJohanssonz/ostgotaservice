@@ -1,14 +1,4 @@
-/* Default styles for desktop */
-
-/* Media query for mobile devices */
-@media only screen and (max-width: 768px) {
-  /* Styles for mobile devices go here */
-  body {
-    font-size: 16px;
-  }
-  /* Add more styles as needed */
-}
-/* Grundläggande styling för hela sidan */
+/* Default styles for all devices */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -17,7 +7,73 @@ body {
   box-sizing: border-box;
 }
 
-/* Navigeringsbar med Flexbox */
+/* Sidebar styles */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #575757;
+  padding-top: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  background-color: lightblue;
+}
+
+/* Hamburger button */
+.hamburger {
+  font-size: 30px;
+  background-color: lightblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  display: block; /* Always display the hamburger button */
+}
+
+/* Main content area */
+.mainsection {
+  margin-left: 250px; /* Adjust for the sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+/* Optional overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Navigation Bar with Flexbox */
 .navbar {
   background-color: #333;
   display: flex;
@@ -36,7 +92,7 @@ body {
   border-radius: 5px;
 }
 
-/* Header med Flexbox: kontaktinformation till vänster, logotyp till höger */
+/* Header with Flexbox: Contact info left, logo right */
 .headerLogoAndLinks {
   display: flex;
   justify-content: space-between;
@@ -46,7 +102,7 @@ body {
   color: white;
 }
 
-/* Kontaktinformation till vänster */
+/* Contact information on the left */
 .headerLogoAndLinks .kontakt {
   display: flex;
   flex-direction: column;
@@ -57,58 +113,27 @@ body {
   margin: 5px 0;
 }
 
-/* Logotypen till höger */
+/* Logo on the right */
 .headerLogoAndLinks img {
   width: 150px;
   height: auto;
   border-radius: 50%;
 }
 
-/* Justera texten under logotypen */
 .headerLogoAndLinks h1 {
   margin: 0;
   padding-left: 20px;
 }
 
-/* Responsiv design med Flexbox */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar a {
-    display: block;
-    padding: 15px;
-  }
-
-  /* Gör logotypen mindre på mindre skärmar */
-  .headerLogoAndLinks img {
-    width: 100px;
-  }
-
-  /* Ändra layout till vertikal på mindre skärmar */
-  .headerLogoAndLinks {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Kontaktinformationen centrerad på mindre skärmar */
-  .headerLogoAndLinks .kontakt {
-    align-items: center;
-  }
-}
-
-/* Styling för main-sektionen */
-/* Flexbox Layout for Figure */
+/* Styling for main section */
 .städlogo {
   display: flex;
   align-items: center;
-  gap: 20px; /* Adjust spacing between text and image */
+  gap: 20px;
   padding: 20px;
   background-color: #f0f0f0;
 }
+
 .omfattande {
   display: inline;
   align-items: center;
@@ -118,31 +143,33 @@ body {
   margin-top: -200px;
   font-size: larger;
 }
+
 .städlogo img {
-  width: 300px; /* Adjust as needed */
+  width: 300px;
   height: auto;
-  border-radius: 50%; /* Optional: for rounded corners */
+  border-radius: 50%;
 }
 
 .text-content {
-  max-width: 600px; /* Adjust as needed */
-  .text-content p {
-    font-size: 1rem;
-    color: #666;
-  }
+  max-width: 600px;
 }
 
-/*styling ul list*/
+.text-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Service List styling */
 .service-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5px;
   background-color: #f0f0f0;
- font-family: Arial, Helvetica, sans-serif;
- font-size: large;
- width: 900px;
- margin-left: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  width: 900px;
+  margin-left: 250px; /* Adjust for the sidebar width */
 }
 
 .omOss {
@@ -152,13 +179,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: larger;
   width: 800px;
-  margin-left: 250px;
+  margin-left: 250px; /* Adjust for the sidebar width */
   margin-top: 20px;
   padding: 10px;
 }
 
-
-/* Proffsen */
+/* Proffsen section */
 .proffsen {
   margin-top: 20px;
   display: flex;
@@ -191,7 +217,6 @@ body {
   overflow: hidden; 
 }
 
-/* Image styling */
 .proffs img {
   width: 100%; 
   height: auto; 
@@ -199,7 +224,6 @@ body {
   display: block; 
 }
 
-/* Caption styling */
 .proffs figcaption {
   margin-top: 10px;
   font-size: 14px;
@@ -207,9 +231,61 @@ body {
   font-weight: bold;
 }
 
-/*instagram and footer*/
+/* Instagram and Footer */
 footer {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
+}
+
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide sidebar off-screen by default */
+    transition: left 0.3s ease; /* Smooth transition */
+  }
+
+  .sidebar.open {
+    left: 0; /* Slide sidebar in */
+  }
+
+  .mainsection {
+    margin-left: 0; /* Remove margin for mobile */
+  }
+
+  /* Ensure hamburger button is always visible */
+  .hamburger {
+    display: block; /* Always display the hamburger button */
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 15px;
+  }
+
+  .headerLogoAndLinks img {
+    width: 100px;
+  }
+
+  .headerLogoAndLinks {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerLogoAndLinks .kontakt {
+    align-items: center;
+  }
+
+  .overlay.show {
+    display: block;
+  }
 }
