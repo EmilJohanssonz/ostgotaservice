@@ -1,0 +1,215 @@
+/* Default styles for desktop */
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  /* Styles for mobile devices go here */
+  body {
+    font-size: 16px;
+  }
+  /* Add more styles as needed */
+}
+/* Grundläggande styling för hela sidan */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* Navigeringsbar med Flexbox */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Header med Flexbox: kontaktinformation till vänster, logotyp till höger */
+.headerLogoAndLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 20px;
+  color: white;
+}
+
+/* Kontaktinformation till vänster */
+.headerLogoAndLinks .kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headerLogoAndLinks .kontakt p {
+  margin: 5px 0;
+}
+
+/* Logotypen till höger */
+.headerLogoAndLinks img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Justera texten under logotypen */
+.headerLogoAndLinks h1 {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Responsiv design med Flexbox */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 15px;
+  }
+
+  /* Gör logotypen mindre på mindre skärmar */
+  .headerLogoAndLinks img {
+    width: 100px;
+  }
+
+  /* Ändra layout till vertikal på mindre skärmar */
+  .headerLogoAndLinks {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Kontaktinformationen centrerad på mindre skärmar */
+  .headerLogoAndLinks .kontakt {
+    align-items: center;
+  }
+}
+
+/* Styling för main-sektionen */
+/* Flexbox Layout for Figure */
+.städlogo {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between text and image */
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.omfattande {
+  display: inline;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  margin-top: -200px;
+  font-size: larger;
+}
+.städlogo img {
+  width: 300px; /* Adjust as needed */
+  height: auto;
+  border-radius: 50%; /* Optional: for rounded corners */
+}
+
+.text-content {
+  max-width: 600px; /* Adjust as needed */
+  .text-content p {
+    font-size: 1rem;
+    color: #666;
+  }
+}
+
+/*styling ul list*/
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  background-color: #f0f0f0;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: large;
+ width: 900px;
+ margin-left: 200px;
+}
+
+.omOss {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  width: 800px;
+  margin-left: 250px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+/* Proffsen */
+.proffsen {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+/* Container for images */
+.bilder {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+  padding: 20px;
+}
+
+/* Styling for each figure */
+.proffs {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  max-width: 200px; 
+  padding: 10px; 
+  background-color: #fff;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+}
+
+/* Image styling */
+.proffs img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  display: block; 
+}
+
+/* Caption styling */
+.proffs figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/*instagram and footer*/
+footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
