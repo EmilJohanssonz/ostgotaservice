@@ -13,16 +13,21 @@ body {
   width: 250px;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -250px; /* Initially hidden off-screen */
   background-color: #575757;
   padding-top: 20px;
   transition: left 0.3s ease;
   z-index: 1000;
 }
 
+.sidebar.open {
+  left: 0; /* Sidebar slides in when open */
+}
+
 .sidebar ul {
   list-style: none;
   padding: 0;
+  padding-top: 30px;
 }
 
 .sidebar ul li {
@@ -50,15 +55,8 @@ body {
   position: fixed;
   top: 15px;
   left: 15px;
-  z-index: 1001;
-  display: block; /* Always display the hamburger button */
-}
-
-/* Main content area */
-.mainsection {
-  margin-left: 250px; /* Adjust for the sidebar width */
-  padding: 20px;
-  transition: margin-left 0.3s;
+  z-index: 9999; /* Ensure the hamburger button is on top */
+  display: block;
 }
 
 /* Optional overlay */
@@ -73,26 +71,11 @@ body {
   z-index: 999;
 }
 
-/* Navigation Bar with Flexbox */
-.navbar {
-  background-color: #333;
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
+.overlay.show {
+  display: block;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.navbar a:hover {
-  background-color: #575757;
-  border-radius: 5px;
-}
-
-/* Header with Flexbox: Contact info left, logo right */
+/* Header section */
 .headerLogoAndLinks {
   display: flex;
   justify-content: space-between;
@@ -102,7 +85,6 @@ body {
   color: white;
 }
 
-/* Contact information on the left */
 .headerLogoAndLinks .kontakt {
   display: flex;
   flex-direction: column;
@@ -113,7 +95,6 @@ body {
   margin: 5px 0;
 }
 
-/* Logo on the right */
 .headerLogoAndLinks img {
   width: 150px;
   height: auto;
@@ -125,7 +106,22 @@ body {
   padding-left: 20px;
 }
 
-/* Styling for main section */
+/* Main content area */
+.mainsection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+  margin-left: 0; /* Adjust this value to move it more to the left */
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+  
+  /* Media query to handle different screen sizes */
+  @media only screen and (max-width: 768px) {
+    margin-left: 0; /* No left margin on mobile */
+  }
+}
+
+/* Städlogo and content */
 .städlogo {
   display: flex;
   align-items: center;
@@ -140,18 +136,15 @@ body {
   padding: 20px;
   background-color: white;
   color: #333;
-  margin-top: -200px;
   font-size: larger;
 }
 
+/* Make sure the content inside .mainsection takes up available width */
 .städlogo img {
-  width: 300px;
+  width: 100%; /* Make the image responsive */
+  max-width: 100px; /* Restrict the maximum size */
   height: auto;
   border-radius: 50%;
-}
-
-.text-content {
-  max-width: 600px;
 }
 
 .text-content p {
@@ -159,69 +152,56 @@ body {
   color: #666;
 }
 
-/* Service List styling */
+/* Service list */
 .service-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   background-color: #f0f0f0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
-  width: 900px;
-  margin-left: 250px; /* Adjust for the sidebar width */
+  margin: 0; /* Remove fixed margins */
+  width: 100%; /* Full width for flexibility */
 }
 
+/* About us */
 .omOss {
   display: flex;
   justify-content: center;
   background-color: #f0f0f0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: larger;
-  width: 800px;
-  margin-left: 250px; /* Adjust for the sidebar width */
-  margin-top: 20px;
+  width: 100%;
   padding: 10px;
 }
 
-/* Proffsen section */
-.proffsen {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-
-/* Container for images */
+/* Images and grid layout */
 .bilder {
   display: flex;
-  justify-content: center; 
-  gap: 20px; 
-  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
   padding: 20px;
 }
 
-/* Styling for each figure */
 .proffs {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  max-width: 200px; 
-  padding: 10px; 
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Make the width responsive */
+  max-width: 200px;
+  padding: 10px;
   background-color: #fff;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  overflow: hidden; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .proffs img {
-  width: 100%; 
-  height: auto; 
-  border-radius: 8px; 
-  display: block; 
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .proffs figcaption {
@@ -231,48 +211,34 @@ body {
   font-weight: bold;
 }
 
-/* Instagram and Footer */
+/* Footer */
 footer {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
 
+footer button {
+  background-color: lightblue;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
 /* Responsive styles for mobile devices */
 @media only screen and (max-width: 768px) {
   .sidebar {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px; /* Hide sidebar off-screen by default */
-    transition: left 0.3s ease; /* Smooth transition */
-  }
-
-  .sidebar.open {
-    left: 0; /* Slide sidebar in */
+    width: 70vw; /* Sidebar takes up 70% of the screen width on mobile */
+    left: -70vw; /* Initially hidden off-screen */
+    transition: left 0.3s ease;
   }
 
   .mainsection {
-    margin-left: 0; /* Remove margin for mobile */
+    margin-left: 0; /* No left margin on mobile */
   }
 
-  /* Ensure hamburger button is always visible */
   .hamburger {
-    display: block; /* Always display the hamburger button */
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar a {
-    display: block;
-    padding: 15px;
-  }
-
-  .headerLogoAndLinks img {
-    width: 100px;
+    display: block; /* Ensure the hamburger button is always visible */
   }
 
   .headerLogoAndLinks {
@@ -281,11 +247,31 @@ footer {
     text-align: center;
   }
 
-  .headerLogoAndLinks .kontakt {
-    align-items: center;
+  .headerLogoAndLinks img {
+    width: 100px; /* Smaller image on mobile */
+  }
+
+  .service-list, .omOss {
+    width: 100%; /* Make service list and about us full-width */
+    margin-left: 0;
   }
 
   .overlay.show {
     display: block;
+  }
+
+  .städlogo img {
+    max-width: 100%; /* Let the image take up full width */
+  }
+}
+
+/* Larger screens adjustments */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 250px; /* Fixed sidebar width on larger screens */
+  }
+
+  .mainsection {
+    margin-left: 250px; /* Leave room for the sidebar */
   }
 }
