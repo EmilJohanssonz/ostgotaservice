@@ -1,9 +1,7 @@
-/* Default styles for all devices */
-body {
-  font-family: Arial, sans-serif;
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
   box-sizing: border-box;
 }
 
@@ -56,7 +54,6 @@ body {
   top: 15px;
   left: 15px;
   z-index: 9999; /* Ensure the hamburger button is on top */
-  display: block;
 }
 
 /* Optional overlay */
@@ -106,19 +103,37 @@ body {
   padding-left: 20px;
 }
 
+/* .rutavdrag section */
+.rutavdrag {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center both the paragraph and the image */
+  gap: 10px;
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  margin: 0;
+  padding: 10px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.rutavdrag img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
 /* Main content area */
 .mainsection {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start (left) */
-  margin-left: 0; /* Adjust this value to move it more to the left */
+  align-items: flex-start;
+  margin-left: 250px;
   padding: 20px;
-  text-align: left; /* Align text to the left */
-  
-  /* Media query to handle different screen sizes */
-  @media only screen and (max-width: 768px) {
-    margin-left: 0; /* No left margin on mobile */
-  }
+  text-align: left;
 }
 
 /* Städlogo and content */
@@ -139,10 +154,9 @@ body {
   font-size: larger;
 }
 
-/* Make sure the content inside .mainsection takes up available width */
 .städlogo img {
-  width: 100%; /* Make the image responsive */
-  max-width: 100px; /* Restrict the maximum size */
+  width: 100%;
+  max-width: 100px;
   height: auto;
   border-radius: 50%;
 }
@@ -161,8 +175,7 @@ body {
   background-color: #f0f0f0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
-  margin: 0; /* Remove fixed margins */
-  width: 100%; /* Full width for flexibility */
+  width: 100%;
 }
 
 /* About us */
@@ -189,13 +202,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Make the width responsive */
+  width: 100%;
   max-width: 200px;
   padding: 10px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
 }
 
 .proffs img {
@@ -228,17 +240,17 @@ footer button {
 /* Responsive styles for mobile devices */
 @media only screen and (max-width: 768px) {
   .sidebar {
-    width: 70vw; /* Sidebar takes up 70% of the screen width on mobile */
-    left: -70vw; /* Initially hidden off-screen */
+    width: 70vw;
+    left: -70vw;
     transition: left 0.3s ease;
   }
 
   .mainsection {
-    margin-left: 0; /* No left margin on mobile */
+    margin-left: 0;
   }
 
   .hamburger {
-    display: block; /* Ensure the hamburger button is always visible */
+    display: block;
   }
 
   .headerLogoAndLinks {
@@ -248,12 +260,11 @@ footer button {
   }
 
   .headerLogoAndLinks img {
-    width: 100px; /* Smaller image on mobile */
+    width: 100px;
   }
 
   .service-list, .omOss {
-    width: 100%; /* Make service list and about us full-width */
-    margin-left: 0;
+    width: 100%;
   }
 
   .overlay.show {
@@ -261,17 +272,17 @@ footer button {
   }
 
   .städlogo img {
-    max-width: 100%; /* Let the image take up full width */
+    max-width: 100%;
   }
 }
 
 /* Larger screens adjustments */
 @media (min-width: 1025px) {
   .sidebar {
-    width: 250px; /* Fixed sidebar width on larger screens */
+    width: 250px;
   }
 
   .mainsection {
-    margin-left: 250px; /* Leave room for the sidebar */
+    margin-left: 250px;
   }
 }
