@@ -16,5 +16,5 @@ As a project, I built this website to help showcase their services, provide easy
 - **Project Purpose**: A description explaining that you built this website to help your brother’s company.
 - **Personal Contribution**: Emphasizes your role in supporting the company with the website.
   
-This approach personalizes the README by highlighting your involvement and motivation behind the project. Let me know if this works for you!
+This approach personalizes the README by highlighting your involvement and motivation behind the project. if something is wrong then tell me what I can think about of the future!
 
