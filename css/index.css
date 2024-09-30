@@ -17,7 +17,6 @@ html, body {
   transition: left 0.3s ease;
   z-index: 1000;
 }
-
 .sidebar.open {
   left: 0; /* Sidebar slides in when open */
 }
@@ -42,6 +41,7 @@ html, body {
 .sidebar ul li a:hover {
   background-color: lightblue;
 }
+
 
 /* Hamburger button */
 .hamburger {
@@ -184,7 +184,6 @@ html, body {
   justify-content: center;
   background-color: #f0f0f0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: larger;
   width: 100%;
   padding: 10px;
 }
@@ -196,46 +195,46 @@ html, body {
   gap: 20px;
   flex-wrap: wrap;
   padding: 20px;
+  .proffs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }
 
-.proffs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 200px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .proffs img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  .proffs figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
 }
 
-.proffs figcaption {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-  font-weight: bold;
-}
 
 /* Footer */
 footer {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
+  footer button {
+    background-color: lightblue;
+    color: white;
+    border: none;
+    padding: 10px;
+  }
 }
 
-footer button {
-  background-color: lightblue;
-  color: white;
-  border: none;
-  padding: 10px;
-}
 
 /* Responsive styles for mobile devices */
 @media only screen and (max-width: 768px) {

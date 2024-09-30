@@ -4,84 +4,86 @@
   gap: 20px;
   padding: 40px;
   background-color: #f9f9f9;
+  .service {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .service h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .service p {
+    color: #666;
+    font-size: 1rem;
+  }
 }
 
-.service {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+/* För att ändra bakgrundsfärgen när man hovrar över rader */
+.pricing-section table tr:hover {
+  background-color: lightblue;
+  .pricing-section table td:hover {
+    background-color: lightblue;
+  }
 }
 
-.service h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.service p {
-  color: #666;
-  font-size: 1rem;
-}
 
 /* Pricing section */
 .pricing-section {
   text-align: center;
   padding: 40px;
+  .pricing-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }
 
-.pricing-table {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .pricing-table th, .pricing-table td {
   padding: 15px;
   border: 1px solid #ddd;
+  .pricing-table th {
+    background-color: lightblue;
+    color: white;
+  }
+  .pricing-table td {
+    font-size: 1rem;
+    color: #333;
+  }
 }
 
-.pricing-table th {
-  background-color: lightblue;
-  color: white;
-}
-
-.pricing-table td {
-  font-size: 1rem;
-  color: #333;
-}
 
 /* review section */
 .reviews-section {
   background-color: #f9f9f9;
   padding: 40px;
   text-align: center;
+  .review {
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .review p {
+    margin: 5px 0;
+  }
 }
 
-.review {
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.review p {
-  margin: 5px 0;
-}
 
 /* process section */
 .process-section {
   text-align: center;
   padding: 40px;
   background-color: white;
+  .process-section p {
+    font-size: 1rem;
+    color: #666;
+  }
 }
-
-.process-section p {
-  font-size: 1rem;
-  color: #666;
-}
-
 
 
 /*media queries*/

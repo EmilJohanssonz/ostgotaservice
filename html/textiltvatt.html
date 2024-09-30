@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Textiltvätt</title>
   <link rel="stylesheet" href="/css/index.css">
-  <script src="index.js">defer</script>
+  <script src="../index.js" defer></script>
   <link rel="stylesheet" href="/css/textill.css">
 </head>
 <body>
@@ -37,7 +37,8 @@
       <p>Mobil:| 073-528 24 55</p>
       <p>Email:| ostgotaservice.uf@gmail.com</p>
     </div>
-    <img src="/img/logoost.jpeg.jpeg" alt="Östgöta Service UF logotyp">
+    <a href="/html/index.html">
+      <img src="/img/logoost.jpeg.jpeg" alt="Östgöta Service UF logotyp"></a>
     <h1>Östgöta Service UF</h1>
     <p>Vi tar hand om din vardag!</p>
   </header>
@@ -46,20 +47,24 @@
   <main>
     <!-- Service section -->
     <section class="service-section">
-      <article class="service">
+      <article class="service" id="soffa">
         <h2>Tvätt av Soffa</h2>
         <p>Professionell rengöring av din soffa med specialiserade produkter som avlägsnar fläckar och lukt.</p>
+        <div id="soffa-image"></div>
       </article>
-    
-      <article class="service">
+      
+      <article class="service" id="fatolj">
         <h2>Tvätt av Fåtölj</h2>
         <p>Vi använder djuprengörande metoder för att fräscha upp din fåtölj och återställa dess ursprungliga skick.</p>
+        <div id="fatolj-image"></div>
       </article>
-    
-      <article class="service">
+      
+      <article class="service" id="sang">
         <h2>Tvätt av Säng (Enkel och Dubbel)</h2>
         <p>Effektiv rengöring av sängar, med fokus på att ta bort damm, fläckar och allergener.</p>
+        <div id="sang-image"></div>
       </article>
+      
     </section>
 
     <!-- Pricing section -->
