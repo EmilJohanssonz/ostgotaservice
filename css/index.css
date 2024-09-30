@@ -51,7 +51,7 @@ html, body {
   border: none;
   cursor: pointer;
   position: fixed;
-  top: 15px;
+  top: 8px;
   left: 15px;
   z-index: 9999; /* Ensure the hamburger button is on top */
 }
@@ -80,6 +80,7 @@ html, body {
   background-color: lightblue;
   padding: 20px;
   color: white;
+ 
 }
 
 .headerLogoAndLinks .kontakt {
