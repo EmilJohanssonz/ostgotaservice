@@ -131,7 +131,6 @@ address span
   font-size: large;
   margin: 0 auto; /* Centrerar rutan */
   padding: 10px;
-  max-width: 1200px;
   width: 100%; /* Gör den responsiv */
 }
 
