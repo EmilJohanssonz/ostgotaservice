@@ -3,6 +3,12 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  p {
+    font-family: 'Lora', serif;
+  }
+h1, h2, h3, h4, h4 {
+  font-family: 'Roboto', sans-serif;
+}  
 }
 
 /* Sidebar styles */
@@ -104,23 +110,24 @@ html, body {
   padding-left: 20px;
 }
 
-/* .rutavdrag section */
+/* Rutavdrag */
 .rutavdrag {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center both the paragraph and the image */
-  gap: 10px;
+  align-items: center; /* Centrerar rutavdragsrutan */
+  justify-content: center;
   background-color: #f0f0f0;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: large;
-  margin: 0;
+  margin: 0 auto; /* Centrerar rutan */
   padding: 10px;
   max-width: 1200px;
-  width: 100%;
-  p {
-    width: 70%;
-  }
-  
+  width: 100%; /* Gör den responsiv */
+}
+
+.rutavdrag p {
+  text-align: center; /* Gör texten centrerad */
+  width: 70%;
+  word-wrap: break-word; /* Säkerställer att texten inte går utanför rutan */
 }
 
 .rutavdrag img {
@@ -153,7 +160,6 @@ html, body {
   justify-content: center;
   gap: 10px;
   background-color: #f0f0f0;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: large;
   width: 100%;
   li {
@@ -167,7 +173,6 @@ html, body {
   display: flex;
   justify-content: center;
   background-color: #f0f0f0;
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   padding: 10px;
   h5 {
