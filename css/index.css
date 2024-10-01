@@ -99,7 +99,7 @@ address p {
   margin: 5px 0;
 }
 
-.headerLogoAndLinks img {
+#logo {
   width: 150px;
   height: auto;
   border-radius: 50%;
