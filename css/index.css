@@ -149,17 +149,30 @@ address span
 }
 
 /* Main content area */
-.mainsection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border: none;
-  p {
-    font-size: larger;
-    margin-bottom: 10px;
-    width: 80%;
-  }
+main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	p {
+		font-size: larger;
+		margin: 0 auto;
+		margin-bottom: 1rem;
+		width: 80%;
+	}
+
+	span 
+	{
+			margin: 0 auto;
+			max-width: 1200px;
+			margin: 0 auto;
+			h1
+			{
+				text-align: center;
+			}
+	}
 }
 
 
@@ -169,7 +182,6 @@ address span
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  background-color: #f0f0f0;
   font-size: large;
   width: 100%;
   li {
@@ -181,6 +193,7 @@ address span
 /* About us */
 .omOss {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: #f0f0f0;
   width: 100%;
@@ -188,11 +201,17 @@ address span
   h5 {
     font-size: x-large;
     text-decoration: underline;
+	text-align: center;
   }
   p {
+	margin: 1rem auto;
     font-size: smaller;
     width: 80%;
-    margin-top: -30px;
+  }
+  span 
+  {
+	margin: 0 auto;
+	padding: 1rem;
   }
 }
 
@@ -232,13 +251,13 @@ address span
 
 /* Footer */
 footer {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
- img {
-  height: 50px;
-  width: 50px;
- }
+	background-color: lightblue;
+	padding: 20px;
+	text-align: center;
+	img {
+		height: 50px;
+		width: 50px;
+	}
 }
 
 
@@ -248,10 +267,6 @@ footer {
     width: 70vw;
     left: -70vw;
     transition: left 0.3s ease;
-  }
-
-  .mainsection {
-    margin-left: 0;
   }
 
   .hamburger {
@@ -285,9 +300,5 @@ footer {
 @media (min-width: 1025px) {
   .sidebar {
     width: 250px;
-  }
-
-  .mainsection {
-    margin-left: 250px;
   }
 }
