@@ -89,13 +89,13 @@ h1, h2, h3, h4, h4 {
  
 }
 
-.headerLogoAndLinks .kontakt {
+address{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.headerLogoAndLinks .kontakt p {
+address p {
   margin: 5px 0;
 }
 
