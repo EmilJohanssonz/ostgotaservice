@@ -93,10 +93,21 @@ address{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 1rem;
 }
 
 address p {
   margin: 5px 0;
+}
+
+address img 
+{
+	max-width: 32px;
+}
+
+address span
+{
+	margin: 0 auto;
 }
 
 #logo {
